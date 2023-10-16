@@ -14,7 +14,7 @@ import { Head } from '@inertiajs/vue3';
         <div class="py-12">
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                 <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                    <div v-if="tamn" class="p-6 text-gray-900">You're logged in!</div>
+                    <div v-if="tamn" class="p-6 text-gray-900">DRIVER</div>
                     <button @click="smeniVrednost()">click</button>
                     <li v-for="item in niza">
                       {{ item }}
@@ -30,23 +30,11 @@ export default {
     return {
      tamn: true,
      niza: ['1','2','3'],
-     data:[],
-
-     
+     data:[]
     };
   },
   methods: {
-    smeniVrednost() {
-        
-        axios.get('/api/getRole') // Replace with your API endpoint
-                .then(response => {
-                    this.data = response.data;
-                })
-                .catch(error => {
-                    console.error(error);
-                });
-       
-    }
-  },
-}
+  
+  }
+};
 </script>

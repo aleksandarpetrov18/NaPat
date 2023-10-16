@@ -10,20 +10,11 @@ use Illuminate\Support\Carbon;
 
 class TestController extends Controller
 {
-    public function getDate(int $id)
+    public function getRole(Request $request)
     {
-        //Carbon::parse($value)->format('Y-m-d H:i:s');
-        $user = User::where('id',$id)
-            ->first();
-            if(!$user) {
-                return response()->json("ne postoe", 404);
-            }
-        $roleid = RolesId::where('user_id', $id)
-            ->select('role_id')->first()->toArray();
-        if($roleid != 2) {
-            return response()->json("Nema za tebe", 403);
-        }
-            return response()->json($user, 200);
+        
+      
+
     }
 }
 
